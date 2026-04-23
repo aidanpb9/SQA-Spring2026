@@ -38,7 +38,8 @@ for r in requirements:
         failures.append(f"Invalid requirement_id format: {rid}")
 
     # Rule 3: Must have at least one test case
-    if rid and rid not in test_ids and rid.endswith("003B1"):
+    if rid and rid not in test_ids and rid.endswith(("003B1", "003B2", "003B3", "003B4", 
+                                                     "003B5", "003B6", "003B7", "003B8", "003B9", "003B10", "003B")):
         failures.append(f"No test case for requirement: {rid}")
 
     # Rule 4: No vague phrase
