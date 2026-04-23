@@ -7,7 +7,7 @@ Verification script for requirements and test cases.
 
 Rules:
 1. Required fields exist (requirement_id, description, source)
-2. Requirement ID format: REQ-[id num]-[3 digits][letter][no num or num], e.g., REQ-117.130-001A1
+2. Requirement ID format: REQ-[id num]-[3 digits][letter][no num or num], e.g., REQ-117.130-001A10
 3. Each requirement must have at least one test case
 4. No vague phrases like "all hazards" in description
 5. Parent-child ID consistency (child must start with parent ID)
@@ -34,7 +34,7 @@ for r in requirements:
             failures.append(f"Missing field '{field}' in requirement: {r}")
 
     # Rule 2: ID format
-    if rid and not re.match(r"REQ-\d{3}\.\d{3}-\d{3}[A-Z]\d?$", rid):
+    if rid and not re.match(r"REQ-\d{3}\.\d{3}-\d{3}[A-Z]\d{0,2}$", rid):
         failures.append(f"Invalid requirement_id format: {rid}")
 
     # Rule 3: Must have at least one test case
