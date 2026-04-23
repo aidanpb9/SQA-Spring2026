@@ -1,6 +1,12 @@
 # CFR_TEST
 # Verification & Validation Project – 21 CFR Atomic Rules
 
+Group Members:
+- Aidan Brinkley
+- Grant Carpenter
+- Blake Werk
+- Vincent Cameron
+
 ## Project Overview
 
 This project is designed to teach students **Verification & Validation (V&V) of regulatory requirements** using Python scripts, JSON files, and GitHub Actions. Students will work in **groups** to extract rules from CFR sections, produce atomic units, generate expected structure, and create test cases. An **individual component** will involve LLM-based test case generation.

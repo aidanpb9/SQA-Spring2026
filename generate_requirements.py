@@ -51,18 +51,19 @@ for line in lines:
             "parent": parent
         })
 
-    #We will use the last 10 atomics, B1-B10
-    atomics = requirements[-10:]
-    expected = {}
-    for req in atomics:
-        req_id = req["parent"]
-        if req_id not in expected:
-            expected[req_id] = []
-
-        letter_id = req["requirement_id"].replace(req_id, "")
-        expected[req_id].append(letter_id)
 
 # ---------- Save ----------
+atomics = requirements[-10:]
+expected = {}
+for req in atomics:
+    req_id = req["parent"]
+    if req_id not in expected:
+        expected[req_id] = []
+
+    letter_id = req["requirement_id"].replace(req_id, "")
+    expected[req_id].append(letter_id)
+
+
 with open(OUTPUT_JSON, "w") as f:
     json.dump(expected, f, indent=2)
 
