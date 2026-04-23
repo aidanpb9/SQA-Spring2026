@@ -25,3 +25,27 @@ jobs:
 
       - name: Run Validation
         run: python scripts/validate.py
+
+      # Forensic Method 5: log CI build pass/fail status
+      - name: Log Forensic CI Build Status
+        if: always()
+        run: |
+          STATUS=$( [ "${{ job.status }}" = "success" ] && echo "PASSED" || echo "FAILED" )
+          SEVERITY=$( [ "$STATUS" = "PASSED" ] && echo "INFO" || echo "ERROR" )
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          python3 - <<EOF
+          import json, os
+          log = "forensic_log.json"
+          events = json.load(open(log)) if os.path.exists(log) else []
+          events.append({"timestamp": "$TIMESTAMP", "event_type": "CI_BUILD_STATUS", "severity": "$SEVERITY", "detail": "CI build $STATUS"})
+          json.dump(events, open(log, "w"), indent=2)
+          print(f"[Forensic] CI_BUILD_STATUS: $STATUS")
+          EOF
+
+      - name: Upload Forensic Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forensic-log
+          path: forensic_log.json
+          if-no-files-found: ignore
