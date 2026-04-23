@@ -17,5 +17,11 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Run Verification
+        run: python scripts/verify.py
+
       - name: Print Demo Message
         run: echo "Hello from GitHub Actions! I am modifying this file "
+
+      - name: Run Validation
+        run: python scripts/validate.py
