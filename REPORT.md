@@ -190,8 +190,7 @@ The CI workflow (`.github/workflows/ci.yaml`) runs automatically on every push a
 To view GitHub Actions logs and download the forensic artifact:  
 `https://github.com/aidanpb9/SQA-Spring2026/actions`
 
-_<img width="1470" height="917" alt="Screenshot 2026-04-24 at 1 38 23 PM" src="https://github.com/user-attachments/assets/d0bde575-5f84-44c8-97ea-c2c5754e26e9" />
-_
+<img width="1470" height="917" alt="Screenshot 2026-04-24 at 1 38 23 PM" src="https://github.com/user-attachments/assets/d0bde575-5f84-44c8-97ea-c2c5754e26e9" />
 
 ---
 
