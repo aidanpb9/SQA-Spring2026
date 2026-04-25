@@ -12,13 +12,13 @@ This project applied Software Quality Assurance (SQA) principles to the document
 
 ---
 
-## Task 0: Project Repository
+## Task 0 [Aidan Brinkley]: Project Repository
 
 We created a GitHub repository (`aidanpb9/SQA-Spring2026`) and added all team members as collaborators. A GitHub Actions workflow (`.github/workflows/ci.yaml`) was created to run automatically on every push and pull request, executing both the verification and validation scripts as part of the CI pipeline.
 
 ---
 
-## Task 1: Extract and Structure Requirements
+## Task 1 [Aidan Brinkley]: Extract and Structure Requirements
 
 **What we did:**
 
@@ -37,7 +37,7 @@ Regulatory documents use deeply nested and inconsistent structures. Parsing them
 
 ---
 
-## Task 2: Generate Minimal Test Cases
+## Task 2 [Grant Carpenter]: Generate Minimal Test Cases
 
 **What we did:**
 
@@ -62,7 +62,7 @@ Writing minimal test cases made us think about what each atomic rule actually re
 
 ---
 
-## Task 3: Verification and Validation
+## Task 3 [Blake Werk]: Verification and Validation
 
 **What we did:**
 
@@ -99,7 +99,7 @@ Separating verification (internal structural correctness) from validation (confo
 
 ---
 
-## Task 4: Forensic Integration
+## Task 4 [Vincent Cameron]: Forensic Integration
 
 **What we did:**
 
