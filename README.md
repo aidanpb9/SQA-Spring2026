@@ -68,13 +68,13 @@ python --version
 Mac/Linux:
 ```bash
 git clone https://github.com/aidanpb9/NASA-SQA2026-AUBURN.git
-cd SQA-Spring2026
+cd NASA-SQA2026-AUBURN
 ```
 
 Windows:
 ```cmd
 git clone https://github.com/aidanpb9/NASA-SQA2026-AUBURN.git
-cd SQA-Spring2026
+cd NASA-SQA2026-AUBURN
 ```
 
 ---
